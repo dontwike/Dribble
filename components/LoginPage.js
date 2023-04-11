@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { signIn } from "next-auth/react";
+import logo from "../styles/logo.png";
 
 const LoginPage = () => {
   return (
@@ -10,8 +11,10 @@ const LoginPage = () => {
           <div className="mb-12 md:mb-0 md:w-8/12 lg:w-6/12">
             <img
               src="https://tecdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg"
+              // src = {logo}
               className="w-full"
               alt="Phone image"
+              // alt = {logo}
             />
           </div>
           <div className="md:w-8/12 lg:ml-6 lg:w-5/12">
@@ -55,7 +58,7 @@ const LoginPage = () => {
                 </p>
               </div>
 
-              <a className="mb-3 flex w-full items-center justify-center rounded bg-primary px-7 pt-3 pb-2.5 text-center text-sm font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] bg-blue-700">
+              <div className="mb-3 flex w-full items-center justify-center rounded bg-primary px-7 pt-3 pb-2.5 text-center text-sm font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] bg-blue-700">
                 {/*<!-- Facebook -->*/}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -65,12 +68,8 @@ const LoginPage = () => {
                 >
                   <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
                 </svg>
-                <a
-                  onClick={signIn}
-                >
-                  Continue with Facebook
-                </a>    
-              </a>
+                <a onClick={signIn}>Continue with Facebook</a>
+              </div>
             </form>
           </div>
         </div>

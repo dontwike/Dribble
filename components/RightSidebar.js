@@ -22,17 +22,17 @@ const RightSidebar = () => {
         </div>
       </div>
       <Contacts
-        name="ASDF"
+        name="ASD"
         src="https://images.pexels.com/photos/53754/pexels-photo-53754.jpeg?auto=compress&cs=tinysrgb&h=204&fit=crop&w=228&dpr=2"
         status="online"
       />
       <Contacts
-        name="QWER"
+        name="QWE"
         src="https://images.pexels.com/photos/53754/pexels-photo-53754.jpeg?auto=compress&cs=tinysrgb&h=204&fit=crop&w=228&dpr=2"
         status="offline"
       />
       <Contacts
-        name="ZXCV"
+        name="ZXC"
         src="https://images.pexels.com/photos/53754/pexels-photo-53754.jpeg?auto=compress&cs=tinysrgb&h=204&fit=crop&w=228&dpr=2"
         status="online"
       />

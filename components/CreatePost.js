@@ -6,6 +6,8 @@ import { HiOutlineVideoCamera } from 'react-icons/hi';
 import { IoMdPhotos } from 'react-icons/io';
 import { RiDeleteBin6Line } from 'react-icons/ri';
 import { GiConfirmed } from 'react-icons/Gi';
+import { useDispatch } from 'react-redux';
+import axios from 'axios';
 
 const CreatePost = () => {
   
@@ -14,6 +16,7 @@ const CreatePost = () => {
   const inputRef = useRef(null);
   const hiddenFileInput = useRef(null);
   const [imageToPost, setImageToPost] = useState(null);
+  const dispatch = useDispatch();
 
   const handleClick = () => {
     hiddenFileInput.current.click();
@@ -51,8 +54,8 @@ const CreatePost = () => {
       })
       .then((response) => {
         inputRef.current.value = "";
-        // dispatch(addPost(response.data));
-        // console.log(response.data);
+        dispatch(addPost(response.data));
+        console.log(response.data);
         removeImage();
       })
       .catch((error) => {

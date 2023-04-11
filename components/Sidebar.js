@@ -1,5 +1,5 @@
 import React from "react";
-import Sidebaritem from "./Sidebaritem";
+import Sidebaritem from "./SidebarItem";
 import { ImUsers } from "react-icons/im";
 import { MdGroups } from "react-icons/md";
 import { MdOutlineOndemandVideo } from "react-icons/md";
@@ -31,16 +31,16 @@ const Sidebar = () => {
         {session?.user.name}
       </p>
 
-      <p className="block text-base font-sans font-medium text-left py-3 px-5 text-zinc-300">
+      {/* <p className="block text-base font-sans font-medium text-left py-3 px-5 text-zinc-300">
         Hey, {session?.user.name} thanks for joining the network!!!!
-      </p>
+      </p> */}
 
       {/* <p className="block text-base font-serif font-medium text-left py-3 px-5 hover:bg-gradient-to-r from-cyan-500 to-blue-500 text-zinc-300" onClick={CopyOnClick}>Email:- {session?.user.email}</p> */}
       
       {/* <Sidebaritem Icon={ImUsers} value="Friends" />
-      <Sidebaritem Icon={MdGroups} value="Groups" />
-      <Sidebaritem Icon={MdOutlineOndemandVideo} value="Watch" />
-      <Sidebaritem Icon={BsStopwatch} value="Memories" /> */}
+      <Sidebaritem Icon={MdGroups} value="Groups" /> */}
+      {/* <Sidebaritem Icon={MdOutlineOndemandVideo} value="News" /> */}
+      {/* <Sidebaritem Icon={BsStopwatch} value="Memories" /> */}
     </div>
   );
 };

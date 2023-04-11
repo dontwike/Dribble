@@ -8,7 +8,7 @@ import RightSidebar from '@/components/RightSidebar';
 import LoginPage from '@/components/LoginPage';
 
 export default function Home({ session }) {
-  if (!session) return <Login />;
+  if (!session) return <LoginPage />;
   return (
     <>
       <Head>

@@ -4,31 +4,29 @@ import { FcComments } from "react-icons/fc";
 import { FcShare } from "react-icons/fc";
 import Image from "next/image";
 
-const Post = () => {
+const Post = ({ post }) => {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col" key={post.id}>
       <div className="bg-zinc-900 mt-6 rounded-md p-4">
         <div className="flex items-center space-x-2">
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/b/b0/Cartoon_Border_Collie.png"
+            src={post.profilePic}
             className="rounded-full w-10 h-10"
           />
           <div>
-            <p className="font-medium text-white text-xl pl-3">Pranjal Goyal</p>
-            <p className="text-white text-base pl-3">Time of post</p>
+            <p className="font-medium text-white text-xl pl-3">{post.name}</p>
+            <p className="text-white text-base pl-3">{post.timeStamp}</p>
           </div>
         </div>
-        <p className="py-4 text-white text-lg pl-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        <p className="py-4 text-white text-lg pl-3">{post.post}</p>
       </div>
+      
       {/* If any Images are found */}
-      <div className="relative h-60 md:h-96 bg-zinc-900">
-        <Image
-          src="https://images.pexels.com/photos/15098091/pexels-photo-15098091.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-          alt="No Image"
-          objectFit="cover"
-          layout="fill"
-        ></Image>
-      </div>
+      {post.image != null && (
+        <div className="relative h-60 md:h-96 bg-white">
+          <Image src={post.image} objectFit="cover" layout="fill"></Image>
+        </div>
+      )}
 
       {/* Footer */}
       <div className="flex items-center justify-center bg-zinc-900 p-2">
